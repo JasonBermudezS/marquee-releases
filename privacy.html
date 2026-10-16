@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad | Privacy Policy — Marquee Cinema</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta name="description" content="Política de privacidad oficial de Marquee Cinema para macOS y Mac App Store. Privacidad 100% local, sin rastreo ni recopilación de datos.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#0B0D13',
+              card: '#121620',
+              elevated: '#181D2A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #08090C;
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-card {
+      background: rgba(18, 22, 32, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .badge-glow {
+      box-shadow: 0 0 20px rgba(225, 29, 72, 0.35);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-rose-500 selection:text-white">
+
+  <!-- Barra Superior / Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#08090C]/80 border-b border-white/[0.08]">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="icon.png" alt="Marquee Icon" class="w-9 h-9 rounded-xl shadow-md group-hover:scale-105 transition-transform">
+        <span class="font-display font-black text-xl tracking-tight text-white">MARQUEE</span>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <!-- Selector de Idioma -->
+        <button id="langToggle" onclick="toggleLanguage()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-xs font-semibold text-gray-200 transition-all cursor-pointer">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-rose-400"></i>
+          <span id="langLabel">English</span>
+        </button>
+
+        <a href="index.html" class="flex items-center gap-1.5 text-xs font-semibold text-gray-400 hover:text-white transition-colors">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span data-i18n="back_home">Volver al inicio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="flex-1 max-w-4xl mx-auto px-6 py-12 sm:py-16 w-full">
+    
+    <!-- Encabezado -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-bold uppercase tracking-wider mb-4 badge-glow">
+        <i data-lucide="shield-check" class="w-4 h-4"></i>
+        <span data-i18n="badge">Compromiso de Privacidad 100% Local</span>
+      </div>
+      <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight" data-i18n="title">
+        Política de Privacidad
+      </h1>
+      <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-2xl mx-auto" data-i18n="subtitle">
+        Última actualización: Octubre 2026. Cumplimiento estricto con las directrices de seguridad de Apple y la Mac App Store.
+      </p>
+    </div>
+
+    <!-- Tarjetas de Información de Privacidad -->
+    <div class="space-y-6">
+
+      <!-- Sección 1: Filosofía Zero-Data -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="sec1_title">
+            1. Privacidad por Diseño (Cero Recopilación de Datos)
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="sec1_text">
+          En Marquee creemos que lo que ves en tu computadora es asunto estrictamente tuyo. Marquee <strong>NO recopila, almacena, vende ni comparte</strong> ninguna información personal, historial de visualización, hábitos de reproducción, nombres de archivos personales ni datos de telemetría. La aplicación opera de manera 100% autónoma en tu Mac.
+        </p>
+      </section>
+
+      <!-- Sección 2: Procesamiento Local y Sandboxing -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="folder-key" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="sec2_title">
+            2. Acceso a Archivos y Sandbox de macOS
+          </h2>
+        </div>
+        <div class="space-y-3 text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="sec2_text">
+          <p>
+            Marquee cumple estrictamente con el sistema <strong>macOS App Sandbox</strong> exigido por Apple. La app no tiene acceso indiscriminado a tu disco duro:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-gray-300 pl-2">
+            <li>Solo accede a las carpetas y archivos que tú selecciones explícitamente a través del selector nativo del sistema operativo.</li>
+            <li>Tus películas, pistas de audio y subtítulos nunca son subidos a servidores remotos ni a la nube por parte de Marquee.</li>
+            <li>La sincronización con iCloud Drive es gestionada exclusivamente por los servicios seguros propios de macOS de Apple.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Sección 3: Servicios Externos (TMDb) -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-400 flex items-center justify-center shrink-0">
+            <i data-lucide="film" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="sec3_title">
+            3. Servicios de Terceros (The Movie Database - TMDb)
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="sec3_text">
+          Para enriquecer tu biblioteca con carátulas en alta resolución, sinopsis y fichas de actores, Marquee realiza consultas directas a la API pública de <em>The Movie Database</em> (TMDb). Estas solicitudes contienen únicamente el nombre de la película y el año deducido para obtener la portada correspondiente. En ninguna solicitud se incluye información de tu cuenta, identidad ni datos de tu dispositivo.
+        </p>
+      </section>
+
+      <!-- Sección 4: Almacenamiento Local (SQLite) -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="sec4_title">
+            4. Almacenamiento Local en tu Mac
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="sec4_text">
+          Toda la información del catálogo (listas de películas, progreso de reproducción guardado, favoritos y configuración) se guarda exclusivamente de forma local en una base de datos SQLite en tu Mac (dentro de tu carpeta <code>Application Support</code> protegida por el sistema operativo). Puedes vaciar o eliminar estos datos en cualquier momento desde los Ajustes de la aplicación.
+        </p>
+      </section>
+
+      <!-- Sección 5: Menores de Edad y Niños -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/30 text-purple-400 flex items-center justify-center shrink-0">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="sec5_title">
+            5. Privacidad de Menores (COPPA / GDPR)
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="sec5_text">
+          Al no recopilar ningún tipo de información ni requerir cuentas de usuario, Marquee es completamente seguro para usuarios de cualquier edad, cumpliendo con los estándares de protección de la privacidad infantil internacionales.
+        </p>
+      </section>
+
+      <!-- Sección 6: Contacto y Soporte -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-gray-500/15 border border-gray-500/30 text-gray-300 flex items-center justify-center shrink-0">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="sec6_title">
+            6. Contacto y Transparencia
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="sec6_text">
+          Si tienes preguntas sobre esta política o deseas auditar el funcionamiento de Marquee, puedes visitar nuestro repositorio oficial en GitHub o ponerte en contacto a través de nuestros canales oficiales de soporte técnico.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="https://github.com/JasonBermudezS/marquee-releases" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-all">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Repository</span>
+          </a>
+          <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/30 text-xs font-semibold transition-all">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span>Sitio Web Oficial</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.08] bg-[#050608] py-8 text-center text-xs text-gray-500">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span>© 2026 Marquee Cinema App. All rights reserved.</span>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-gray-300 transition-colors">Inicio</a>
+        <a href="privacy.html" class="text-rose-400 font-semibold">Política de Privacidad</a>
+        <a href="https://github.com/JasonBermudezS/marquee-releases/issues" target="_blank" class="hover:text-gray-300 transition-colors">Soporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lógica Bilingüe (ES / EN) -->
+  <script>
+    lucide.createIcons();
+
+    const i18n = {
+      es: {
+        back_home: "Volver al inicio",
+        badge: "Compromiso de Privacidad 100% Local",
+        title: "Política de Privacidad",
+        subtitle: "Última actualización: Octubre 2026. Cumplimiento estricto con las directrices de seguridad de Apple y la Mac App Store.",
+        sec1_title: "1. Privacidad por Diseño (Cero Recopilación de Datos)",
+        sec1_text: "En Marquee creemos que lo que ves en tu computadora es asunto estrictamente tuyo. Marquee NO recopila, almacena, vende ni comparte ninguna información personal, historial de visualización, hábitos de reproducción, nombres de archivos personales ni datos de telemetría. La aplicación opera de manera 100% autónoma en tu Mac.",
+        sec2_title: "2. Acceso a Archivos y Sandbox de macOS",
+        sec2_text: "<p>Marquee cumple estrictamente con el sistema <strong>macOS App Sandbox</strong> exigido por Apple. La app no tiene acceso indiscriminado a tu disco duro:</p><ul class='list-disc list-inside space-y-1.5 text-gray-300 pl-2 mt-2'><li>Solo accede a las carpetas y archivos que tú selecciones explícitamente a través del selector nativo del sistema operativo.</li><li>Tus películas, pistas de audio y subtítulos nunca son subidos a servidores remotos ni a la nube por parte de Marquee.</li><li>La sincronización con iCloud Drive es gestionada exclusivamente por los servicios seguros propios de macOS de Apple.</li></ul>",
+        sec3_title: "3. Servicios de Terceros (The Movie Database - TMDb)",
+        sec3_text: "Para enriquecer tu biblioteca con carátulas en alta resolución, sinopsis y fichas de actores, Marquee realiza consultas directas a la API pública de The Movie Database (TMDb). Estas solicitudes contienen únicamente el nombre de la película y el año deducido para obtener la portada correspondiente. En ninguna solicitud se incluye información de tu cuenta, identidad ni datos de tu dispositivo.",
+        sec4_title: "4. Almacenamiento Local en tu Mac",
+        sec4_text: "Toda la información del catálogo (listas de películas, progreso de reproducción guardado, favoritos y configuración) se guarda exclusivamente de forma local en una base de datos SQLite en tu Mac (dentro de tu carpeta Application Support protegida por el sistema operativo). Puedes vaciar o eliminar estos datos en cualquier momento desde los Ajustes de la aplicación.",
+        sec5_title: "5. Privacidad de Menores (COPPA / GDPR)",
+        sec5_text: "Al no recopilar ningún tipo de información ni requerir cuentas de usuario, Marquee es completamente seguro para usuarios de cualquier edad, cumpliendo con los estándares de protección de la privacidad infantil internacionales.",
+        sec6_title: "6. Contacto y Transparencia",
+        sec6_text: "Si tienes preguntas sobre esta política o deseas auditar el funcionamiento de Marquee, puedes visitar nuestro repositorio oficial en GitHub o ponerte en contacto a través de nuestros canales oficiales de soporte técnico."
+      },
+      en: {
+        back_home: "Back to Home",
+        badge: "100% Local Privacy Commitment",
+        title: "Privacy Policy",
+        subtitle: "Last updated: October 2026. Strict compliance with Apple security guidelines and the Mac App Store.",
+        sec1_title: "1. Privacy by Design (Zero Data Collection)",
+        sec1_text: "At Marquee, we firmly believe what you watch on your computer is strictly your own business. Marquee DOES NOT collect, store, sell, or share any personal information, viewing history, playback habits, personal filenames, or telemetry data. The application operates 100% autonomously on your Mac.",
+        sec2_title: "2. File Access & macOS App Sandbox",
+        sec2_text: "<p>Marquee strictly complies with the <strong>macOS App Sandbox</strong> system enforced by Apple. The app does not have indiscriminate access to your storage:</p><ul class='list-disc list-inside space-y-1.5 text-gray-300 pl-2 mt-2'><li>It only accesses the folders and files that you explicitly grant access to via the native operating system file picker.</li><li>Your movie files, audio tracks, and subtitles are never uploaded to remote servers or third-party clouds by Marquee.</li><li>iCloud Drive synchronization is handled entirely and securely by macOS native Apple services.</li></ul>",
+        sec3_title: "3. Third-Party Services (The Movie Database - TMDb)",
+        sec3_text: "To enrich your cinema library with high-resolution artwork, synopses, and cast details, Marquee sends direct requests to the public API of The Movie Database (TMDb). These requests only transmit the clean movie title and year to fetch public movie posters. No user account, identity, or device telemetry is ever transmitted.",
+        sec4_title: "4. Local Storage on Your Mac",
+        sec4_text: "All catalog information (movie listings, saved playback progress, favorites, and settings) is stored purely locally in an SQLite database on your Mac (inside your operating-system protected Application Support directory). You can wipe or delete this data at any time from the app Settings.",
+        sec5_title: "5. Children's Privacy (COPPA / GDPR)",
+        sec5_text: "Because Marquee collects zero information and requires no user accounts or registration, it is completely safe for users of all ages and complies with international children's online privacy standards.",
+        sec6_title: "6. Contact & Open Transparency",
+        sec6_text: "If you have any questions regarding this privacy policy or wish to review Marquee's architecture, you can visit our official GitHub repository or reach out via our official technical support channels."
+      }
+    };
+
+    let currentLang = 'es';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      document.getElementById('langLabel').textContent = currentLang === 'es' ? 'English' : 'Español';
+      document.documentElement.lang = currentLang;
+
+      const langData = i18n[currentLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (langData[key]) {
+          el.innerHTML = langData[key];
+        }
+      });
+    }
+  </script>
+</body>
+</html>
